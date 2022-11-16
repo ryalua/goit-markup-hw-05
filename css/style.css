@@ -87,6 +87,7 @@ ul {
 } 
 .nav-header .link {
     text-decoration: none;
+    color: var(--title-text-color);
 }
 .nav-header .link:hover,
 .nav-header .link:focus {
@@ -144,15 +145,11 @@ ul {
 .icon-mail {
     margin-right: 10px;
 
-    width: 16px;
-    height: 12px;
     fill: currentColor;
 }
 .icon-phone {
     margin-right: 10px;
 
-    width: 10px;
-    height: 16px;
     fill: currentColor;
 }
 /* .com-header .icon-envelope:hover,
@@ -163,9 +160,11 @@ ul {
 
 
 /*------------------- Hero h1----------------------*/
+
 .hero {
-    max-width: 1600;
-    min-height: 600;
+    max-width: 1600px;
+    min-height: 600px;
+    margin: 0 auto;
     padding-top: 200px;
     padding-bottom: 200px;
     
@@ -178,6 +177,7 @@ ul {
     url(../images/bcg_Img.jpg);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     align-items: center;
     text-align: center;
 }
@@ -265,36 +265,26 @@ h2 {
     line-height: 1.88;
 } 
 .icon-features {
-    /* display: flex; */
     margin-bottom: 30px;
     padding-top: 25px;
     padding-right: 100px;
     padding-bottom: 25px;
     padding-left: 100px;
 
-    width: 270px;
+    /* width: 270px; */
     height: 120px;
     background-color: var(--button-white-bcg);
-    /* align-items: center; */
 }
 .icon-antenna {
-    width: 70px;
-    height: 70px;
     fill: currentColor;
 }
 .icon-clock {
-    width: 70px;
-    height: 70px;
     fill: currentColor;
 }
 .icon-diagram {
-    width: 70px;
-    height: 70px;
     fill: currentColor;
 }
 .icon-astronaut {
-    width: 70px;
-    height: 70px;
     fill: currentColor;
     }
 
@@ -323,9 +313,13 @@ h2 {
     flex-basis: calc((100% - 90px)/4);
 
     background-color: var(--button-text-color);
+    /* box-shadow: var(--shadow-cards-button); */
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+                0px 1px 1px rgba(0, 0, 0, 0.14), 
+                0px 2px 1px rgba(0, 0, 0, 0.20);
+    border-radius: 0px 0px 4px 4px;
 }
 .staff .title {
-    /* margin-top: 30px; */
     margin-bottom: 10px;
 
     color: var(--title-text-color);
@@ -345,7 +339,7 @@ h2 {
 .staff-border {
     padding-top:30px;
     padding-bottom: 30px;
-    box-shadow: var(--shadow-cards-button);
+    
 }
 .staff-soc-list {
     display: flex;
@@ -386,20 +380,16 @@ h2 {
 
 
 /* ------------------- Clients ---------------*/
-
 .clients-list {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
 }
-
 .client-item {
     flex-basis: calc((100% - 150px)/6);
-    width: 170px;
+    /* width: 170px; */
     height: 92px;
-    border: 1px solid #AFB1B8;
-    border-radius: 4px;
 }
 .client-link {
     width: 100%;
@@ -408,14 +398,29 @@ h2 {
     align-items: center;
     justify-content: center;
     color: #AFB1B8;
-    
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
 }   
 .client-icon {
     fill: currentColor;
 } 
-.client-icon:hover {
-    fill: var(--accent-color);
-    
+/* .client-link:hover,
+.client-link:focus {
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+} */
+
+
+
+.client-link:hover {
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+.client-link:focus {
+    border: none;
+    outline: 1px solid var(--accent-color);
+    color: var(--accent-color);
 }
 
 /*-------------------- Portfolio -------------*/
@@ -448,7 +453,9 @@ h2 {
 .button:focus {
     background-color: var(--accent-color);
     color: var(--button-text-color);
-    box-shadow: var(--shadow-cards-button);
+    box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.10),
+                0 1px 2px 0 rgba(0, 0, 0, 0.08),
+                0 2px 2px 0 rgba(0, 0, 0, 0.12);
 }
 
 /*----- Projects -----*/
@@ -461,11 +468,13 @@ h2 {
      flex-basis: calc((100% - 60px)/3);
      
 }
-.project-item:hover,
-.project-item:focus {
+.project-link {
+    display: block;
+}
+.project-link:hover,
+.project-link:focus {
     box-shadow: var(--shadow-cards-button);
 }
-
 .projects .link {
     padding-top: 0;
     padding-bottom: 0;
@@ -516,6 +525,7 @@ img {
 }
 .footer-box {
     display: flex;
+    align-items: baseline;
 }
 .logo-footer {
     display: inline-block;
@@ -560,7 +570,7 @@ img {
 }
 .footer-title {
     margin-bottom: 20px;
-    color: #FFFFFF;
+    color: var(--button-text-color);
     text-transform: uppercase;
 
     font-weight: 700;
@@ -587,7 +597,9 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #FFFFFF;
+    color: var(--button-text-color);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .footer-soc-icon {
