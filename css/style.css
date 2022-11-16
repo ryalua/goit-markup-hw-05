@@ -10,6 +10,7 @@
     --border-color: #ECECEC;
     --button-hero-hover: #188CE8;
     --shadow-cards-button: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    --timing-function-hover: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -88,6 +89,10 @@ ul {
 .nav-header .link {
     text-decoration: none;
     color: var(--title-text-color);
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing-function-hover);
 }
 .nav-header .link:hover,
 .nav-header .link:focus {
@@ -118,16 +123,20 @@ ul {
     letter-spacing: 0.02em;
     text-decoration:none;
 }
-.com-header .link:hover,
-.com-header .link:focus {
-    color: var(--accent-color);
-}
 .com-header .link {
     padding-top: 32px;
     padding-bottom: 32px;
 
     color: var(--title-text-color);
     text-decoration:none;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing-function-hover);
+}
+.com-header .link:hover,
+.com-header .link:focus {
+    color: var(--accent-color);
 }
 .com-header .link {
     color: var(--primery-text-color);
@@ -206,6 +215,10 @@ ul {
     line-height: 1.9;
     letter-spacing: 0.06em;
     cursor: pointer;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing-function-hover);
 }
 .hero .button-hero:hover,
 .hero .button-hero:focus {
@@ -300,7 +313,7 @@ h2 {
     margin-right: 30px;
 } */
 
-/*----- Team h3, p -----*/
+/*---------------- Team h3, p ---------------------*/
 .section-staff {
     background-color: var(--button-white-bcg);
 }
@@ -359,6 +372,10 @@ h2 {
     align-items: center;
     justify-content: center;
     color: #AFB1B8;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing-function-hover);
 }
 
 .staff-soc-icon {
@@ -400,19 +417,22 @@ h2 {
     color: #AFB1B8;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
+
+    transition-property: border, color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing-function-hover);
 }   
 .client-icon {
     fill: currentColor;
 } 
-/* .client-link:hover,
+.client-link:hover,
 .client-link:focus {
     border: 1px solid var(--accent-color);
     color: var(--accent-color);
-} */
+}
 
 
-
-.client-link:hover {
+/* .client-link:hover {
     border: 1px solid var(--accent-color);
     color: var(--accent-color);
 }
@@ -421,7 +441,7 @@ h2 {
     border: none;
     outline: 1px solid var(--accent-color);
     color: var(--accent-color);
-}
+} */
 
 /*-------------------- Portfolio -------------*/
 /*----- Filters -----*/
@@ -447,6 +467,10 @@ h2 {
     font-size: 16px;
     line-height: 1.62;
     cursor: pointer;
+
+    transition-property: background-color, color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing-function-hover);
     
 }
 .button:hover,
@@ -470,6 +494,10 @@ h2 {
 }
 .project-link {
     display: block;
+
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing-function-hover);
 }
 .project-link:hover,
 .project-link:focus {
@@ -559,6 +587,10 @@ img {
     font-size: 14px;
     line-height: 1.71;
     text-decoration: none;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing-function-hover);
 }
 .com-footer .link-footer:hover,
 .com-footer .link-footer:focus {
@@ -600,6 +632,10 @@ img {
     color: var(--button-text-color);
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing-function-hover);
 }
 
 .footer-soc-icon {
