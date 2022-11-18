@@ -534,7 +534,7 @@ h2 {
 }
 .project-link {
     display: block;
-    position: relative;
+    /* position: relative; */
     
     transition-property: box-shadow;
     transition-duration: 250ms;
@@ -550,7 +550,8 @@ h2 {
 
 
 .project-overlay {
-    position: absolute;
+    position: relative;
+    overflow: hidden;
 
     width: 100%;
     height: 294px;
@@ -560,27 +561,33 @@ h2 {
     transform: translateY(100%);
     transition: transform 1250ms, var(--timing-function-hover);
 }
-.project-link:hover .project-overlay {
+.project-text { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 63px;
+    padding-right: 24px;
+    padding-bottom: 63px;
+    padding-left: 24px;
+    
+    width: 100%;
+    height: 100%;
+    background: rgba(33, 150, 243, 0.09);
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: var(--button-text-color);
+    
+    transform: translateY(100%);
+    opacity: 0;
+    
+    transition: transform 250ms var(--timing-function-hover), 
+        opacity 250ms var(--timing-function-hover);
+}
+.project-link:hover .project-text {
     opacity: 1;
     transform: translateY(0);
 
-}
-
-
-.project-text { 
-    position: absolute;
-    
-    width: 322px;
-    height: 168px;
-    margin: 63px 24px;
-
-    /* background-color: red; */
-    color: var(--button-text-color);
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
-    letter-spacing: 0.03em;
-    
 }
 
 
